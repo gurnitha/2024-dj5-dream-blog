@@ -100,3 +100,11 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 4. HALLO WORLD
+
+
+#### 1. HttpResponse dengan Hallo World!
+
+        modified:   README.md
+        new file:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        modified:   dreamblog/urls.py
