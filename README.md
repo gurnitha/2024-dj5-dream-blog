@@ -144,3 +144,10 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         modified:   apps/blog/templates/blog/index.html
+
+
+#### 2. Setup path untuk static dan media file
+
+        modified:   README.md
+        modified:   dreamblog/settings.py
+        modified:   dreamblog/urls.py
