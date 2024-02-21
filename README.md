@@ -151,3 +151,12 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         modified:   dreamblog/settings.py
         modified:   dreamblog/urls.py
+
+
+#### 3. Menambahkan static assets pada folder static_in_env
+
+        new file:   static_in_env/assets/css/custom.css
+        new file:   static_in_env/assets/css/fontastic.css
+        ...
+        new file:   static_in_env/assets/vendor/popper.js/umd/popper.min.js
+        new file:   static_in_env/assets/vendor/popper.js/umd/poppper.js.flow
