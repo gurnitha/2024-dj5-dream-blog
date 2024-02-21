@@ -12,4 +12,5 @@ app_name = 'blog'
 # urlpatterns
 urlpatterns = [
     path("", views.home_view, name="home_view"),
+    path("contact/", views.contact_view, name="contact_view"),
 ]

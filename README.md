@@ -118,3 +118,11 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         new file:   apps/blog/templates/blog/index.html
         modified:   apps/blog/views.py
+
+
+#### 2. Membuat contact page
+
+        modified:   README.md
+        new file:   apps/blog/templates/blog/contact.html
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
