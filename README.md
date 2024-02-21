@@ -126,3 +126,12 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/blog/templates/blog/contact.html
         modified:   apps/blog/urls.py
         modified:   apps/blog/views.py
+
+
+## 6. NAVIGASI 
+
+#### 1. Membuat navigasi dan mentautkan home dan contact pages
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/contact.html
+        modified:   apps/blog/templates/blog/index.html
