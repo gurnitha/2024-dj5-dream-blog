@@ -137,4 +137,10 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   apps/blog/templates/blog/index.html
 
 
-## 7. TEMPLATING
+## 7. TEMPLATING, STATIC AND MEDIA FILE
+
+
+#### 1. Menambahkan html template pada home page
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/index.html
