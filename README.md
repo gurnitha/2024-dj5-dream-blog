@@ -243,3 +243,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         Tampilan home page saat ini tidak sempurna 
         karena tanpa head, header, footer, dan scripts (21_template_partials/02).
+
+
+#### 3. Include templat partials pada base.html
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/base.html
