@@ -174,3 +174,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/blog/templates/blog/blog.html
         modified:   apps/blog/urls.py
         modified:   apps/blog/views.py
+
+
+#### 6. Loading static dan media files pada blog page
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/blog.html
