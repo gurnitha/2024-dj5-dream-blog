@@ -219,3 +219,12 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 8. TEMPLATE PARTIALS 
+
+
+#### 1. Membuat files templates partials
+
+        modified:   README.md
+        new file:   apps/blog/templates/blog/partials/_footer.html
+        new file:   apps/blog/templates/blog/partials/_head.html
+        new file:   apps/blog/templates/blog/partials/_header.html
+        new file:   apps/blog/templates/blog/partials/_scripts.html
