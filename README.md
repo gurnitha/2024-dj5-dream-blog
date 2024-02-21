@@ -45,3 +45,10 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         Django version 5.0.2, using settings 'dreamblog.settings'
         Starting development server at http://127.0.0.1:8000/
         Quit the server with CTRL-BREAK.
+
+
+#### 3. Default page
+
+        Django version 5.0.2, using settings 'dreamblog.settings'
+        Starting development server at http://127.0.0.1:8000/
+        Quit the server with CTRL-BREAK.
