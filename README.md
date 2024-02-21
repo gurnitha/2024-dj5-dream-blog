@@ -263,3 +263,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/blog/templates/blog/post.html
         modified:   apps/blog/urls.py
         modified:   apps/blog/views.py
+
+
+## 9. MENTAUTKAN LAMAN WEB
