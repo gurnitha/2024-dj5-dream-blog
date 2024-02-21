@@ -97,3 +97,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         C:\Users\ING\Desktop\2024-DEVSPACE\2024-dj5-dream-blog\root(main -> origin)
         (dreamblog) λ python manage.py check
         System check identified no issues (0 silenced).
+
+
+## 4. HALLO WORLD
