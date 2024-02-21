@@ -266,3 +266,11 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 9. MENTAUTKAN LAMAN WEB
+
+
+#### 1. Mentautkan laman-laman web
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/contact.html
+        modified:   apps/blog/templates/blog/partials/_footer.html
+        modified:   apps/blog/templates/blog/partials/_header.html

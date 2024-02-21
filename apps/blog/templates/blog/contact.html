@@ -1,17 +1,16 @@
 <!-- apps/blog/templates/blog/contact.html -->
+{% extends 'blog/base.html' %}
+{% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Dream Blog | Contact</title>
-</head>
-<body>
-	<nav>
-		<a href="{% url 'blog:home_view' %}">Home page</a> |
-		<a href="{% url 'blog:contact_view' %}">Contact page</a>
-	</nav>
-	<h1>Contact Page</h1>
-</body>
-</html>
+{% block content %}
+	<section class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="h3">Contact us</h2>
+            <p class="text-big">Place a nice <strong>introduction</strong> here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
