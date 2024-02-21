@@ -2,11 +2,12 @@
 
 # Django and third parties modules
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 # Locals
 
 # Create your views here.
 
 def home_view(request):
-	return HttpResponse('Hallo World!')
+	# return HttpResponse('Hallo World!')
+	return render(request, 'blog/index.html')

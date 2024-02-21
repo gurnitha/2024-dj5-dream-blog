@@ -111,3 +111,10 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 5. TEMPLATES, VIEWS, DAN URLS
+
+
+#### 1. Membuat home page
+
+        modified:   README.md
+        new file:   apps/blog/templates/blog/index.html
+        modified:   apps/blog/views.py
