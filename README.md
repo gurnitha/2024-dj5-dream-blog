@@ -108,3 +108,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/blog/urls.py
         modified:   apps/blog/views.py
         modified:   dreamblog/urls.py
+
+
+## 5. TEMPLATES, VIEWS, DAN URLS
