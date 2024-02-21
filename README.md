@@ -55,3 +55,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 3. APP DJANGO
+
+
+#### 1. Membuat direktori apps untuk semua aplikasi django
+
+        modified:   README.md
+        (dreamblog) λ mkdir apps
