@@ -228,3 +228,18 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/blog/templates/blog/partials/_head.html
         new file:   apps/blog/templates/blog/partials/_header.html
         new file:   apps/blog/templates/blog/partials/_scripts.html
+
+
+#### 2. Memindahkan bagian head, header, footer, dan scripts dari base templates ke file partials
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/base.html
+        modified:   apps/blog/templates/blog/partials/_footer.html
+        modified:   apps/blog/templates/blog/partials/_head.html
+        modified:   apps/blog/templates/blog/partials/_header.html
+        modified:   apps/blog/templates/blog/partials/_scripts.html
+
+        Note:
+
+        Tampilan home page saat ini tidak sempurna 
+        karena tanpa head, header, footer, dan scripts (21_template_partials/02).
