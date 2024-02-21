@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # Locals
     "apps.blog.apps.BlogConfig",
+    "apps.post.apps.PostConfig",
 ]
 
 MIDDLEWARE = [

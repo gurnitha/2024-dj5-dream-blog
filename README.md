@@ -289,3 +289,13 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/post/models.py
         new file:   apps/post/tests.py
         new file:   apps/post/views.py
+
+
+#### 2. Register aplikasi Post pada dreamblog
+
+        (dreamblog) λ python manage.py check
+        System check identified no issues (0 silenced).
+        
+        modified:   README.md
+        modified:   apps/post/apps.py
+        modified:   dreamblog/settings.py
