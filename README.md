@@ -216,3 +216,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         modified:   apps/blog/templates/blog/base.html
         modified:   apps/blog/templates/blog/index.html
+
+
+## 8. TEMPLATE PARTIALS 
