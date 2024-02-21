@@ -190,3 +190,8 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         new file:   apps/blog/templates/blog/base.html
 
+
+#### 2. Loading base template in home_view
+
+        modified:   README.md
+        modified:   apps/blog/views.py
