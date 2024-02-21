@@ -160,3 +160,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         ...
         new file:   static_in_env/assets/vendor/popper.js/umd/popper.min.js
         new file:   static_in_env/assets/vendor/popper.js/umd/poppper.js.flow
+
+
+#### 4. Loading static dan media files pada home page
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/index.html
