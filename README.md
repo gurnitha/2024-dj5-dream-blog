@@ -249,3 +249,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         modified:   apps/blog/templates/blog/base.html
+
+
+#### 4. Menggunakan teknik template inheritance dan include pada blog.html
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/blog.html
