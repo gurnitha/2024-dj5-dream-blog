@@ -82,3 +82,18 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   apps/blog/models.py
         new file:   apps/blog/tests.py
         new file:   apps/blog/views.py
+
+
+#### 3. Register aplikasi blog pada dreamblog
+
+        modified:   README.md
+        modified:   apps/blog/apps.py
+        modified:   dreamblog/settings.py
+
+        C:\Users\ING\Desktop\2024-DEVSPACE\2024-dj5-dream-blog\root(main -> origin)
+        (dreamblog) λ ls
+        apps/  db.sqlite3  dreamblog/  manage.py*  README.md
+
+        C:\Users\ING\Desktop\2024-DEVSPACE\2024-dj5-dream-blog\root(main -> origin)
+        (dreamblog) λ python manage.py check
+        System check identified no issues (0 silenced).

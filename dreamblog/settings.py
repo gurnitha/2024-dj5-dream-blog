@@ -1,3 +1,5 @@
+# dreamblog/settings.py
+
 """
 Django settings for dreamblog project.
 
@@ -37,6 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # Locals
+    "apps.blog.apps.BlogConfig",
 ]
 
 MIDDLEWARE = [
