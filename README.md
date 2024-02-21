@@ -255,3 +255,11 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         modified:   apps/blog/templates/blog/blog.html
+
+
+#### 5. Membuat laman post
+
+        modified:   README.md
+        new file:   apps/blog/templates/blog/post.html
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
