@@ -276,7 +276,7 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   apps/blog/templates/blog/partials/_header.html
 
 
-## 10. POST APP AND MODELS
+## 10. POST APP
 
 
 #### 1. Membuat aplikasi Post
@@ -299,3 +299,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         modified:   apps/post/apps.py
         modified:   dreamblog/settings.py
+
+
+## 11. DATABASE
