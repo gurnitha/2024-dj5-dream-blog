@@ -120,6 +120,7 @@ class Post(models.Model):
 	# Todo comment count, for now default = 0
 	comment_count = models.IntegerField(default=0)
 	view_count = models.IntegerField(default=0)
+	author = models.ForeignKey(Author, on_delete=models.CASCADE)
 	thumbnail = models.ImageField()
 	# To allow us to select as many categories belong to a post
 	featured = models.BooleanField()
