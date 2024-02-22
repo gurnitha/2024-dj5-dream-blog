@@ -388,3 +388,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   .gitignore
         modified:   README.md
         modified:   dreamblog/settings.py
+
+
+## 12. MODELS
