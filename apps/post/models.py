@@ -93,3 +93,11 @@ class Author(models.Model):
 
 	def __str__(self):
 		return self.user.username
+
+
+# Category model
+class Category(models.Model):
+	title = models.CharField(max_length=25)
+
+	def __str__(self):
+		return self.title
