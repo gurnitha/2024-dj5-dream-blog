@@ -805,3 +805,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         The password is too similar to the email address.
         Bypass password validation and create user anyway? [y/N]: y
         Superuser created successfully.
+
+
+#### 5. Register Author, Category, Tag, dan Post pada post/admin.py
+
+        modified:   README.md
+        modified:   apps/post/admin.py
