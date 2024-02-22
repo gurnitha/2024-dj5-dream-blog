@@ -511,3 +511,37 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
  
         modified:   README.md
         modified:   apps/post/models.py
+
+
+#### 9. Menambahkan hubungan ManyToMany antar model Tag dan Post
+ 
+        modified:   README.md
+        modified:   apps/post/models.py
+
+
+#### 10. Menginstal Pillow
+
+
+        (dreamblog) λ python manage.py check
+        SystemCheckError: System check identified some issues:
+
+        ERRORS:
+        post.Author.profile_picture: (fields.E210) Cannot use ImageField because Pillow is not installed.
+                HINT: Get Pillow at https://pypi.org/project/Pillow/ or run command "python -m pip install Pillow".
+        post.Post.thumbnail: (fields.E210) Cannot use ImageField because Pillow is not installed.
+                HINT: Get Pillow at https://pypi.org/project/Pillow/ or run command "python -m pip install Pillow".
+
+        System check identified 2 issues (0 silenced).
+
+        C:\Users\ING\Desktop\2024-DEVSPACE\2024-dj5-dream-blog\root(main -> origin)
+        (dreamblog) λ pip install pillow
+        Collecting pillow
+          Using cached pillow-10.2.0-cp312-cp312-win_amd64.whl.metadata (9.9 kB)
+        Using cached pillow-10.2.0-cp312-cp312-win_amd64.whl (2.6 MB)
+        Installing collected packages: pillow
+        Successfully installed pillow-10.2.0
+
+        NOTE:
+
+        Karena di dalam tabel Author ada kolom profile_picture (tempat image),
+        maka Django akan minta kita untuk menginstal Pillow.
