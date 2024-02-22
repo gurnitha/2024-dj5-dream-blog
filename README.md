@@ -308,3 +308,17 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         modified:   dreamblog/settings.py
+
+
+#### 2. Menghubungkan database dengan proyek
+
+        (dreamblog) λ pip install psycopg2-binary
+        Collecting psycopg2-binary
+          Using cached psycopg2_binary-2.9.9-cp312-cp312-win_amd64.whl.metadata (4.6 kB)
+        Using cached psycopg2_binary-2.9.9-cp312-cp312-win_amd64.whl (1.2 MB)
+        Installing collected packages: psycopg2-binary
+        Successfully installed psycopg2-binary-2.9.9
+
+        modified:   README.md
+        modified:   dreamblog/settings.py
+
