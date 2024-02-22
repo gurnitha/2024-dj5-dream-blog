@@ -826,3 +826,29 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   media_root/featured-pic-1.jpeg
         new file:   media_root/featured-pic-2.jpeg
         new file:   media_root/featured-pic-3.jpeg
+
+
+#### 2. READ: retrieve posts dari db dan fetch posts pada home page
+
+        modified:   README.md
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        new file:   apps/post/templates/post/base.html
+        new file:   apps/post/templates/post/blog.html
+        new file:   apps/post/templates/post/contact.html
+        new file:   apps/post/templates/post/index.html
+        new file:   apps/post/templates/post/partials/_footer.html
+        new file:   apps/post/templates/post/partials/_head.html
+        new file:   apps/post/templates/post/partials/_header.html
+        new file:   apps/post/templates/post/partials/_scripts.html
+        new file:   apps/post/templates/post/post.html
+        new file:   apps/post/urls.py
+        modified:   apps/post/views.py
+        modified:   dreamblog/urls.py
+
+        NOTE:
+
+        1. Templates, views, and urls dipindahkan dari apps/blog ke apps/posts.
+        2. Image dalam post diplay tidak sesuai tampilan semula (tidak selang-seling)
+
+        NEXT: Mengatur tampilan thumbnail agar selang-seling.

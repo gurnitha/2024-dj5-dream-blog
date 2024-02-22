@@ -1,0 +1,29 @@
+<!-- apps/post/templates/post/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+{% include 'post/partials/_head.html' %}
+<!-- End Head -->
+
+  <body>
+    <!-- Header -->
+    {% include 'post/partials/_header.html' %}
+    <!-- End Header -->
+
+    <!-- Content -->
+    {% block content %}
+    {% endblock content %}
+    <!-- End Content  -->
+
+    <!-- Footer -->
+    {% include 'post/partials/_footer.html' %}
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    {% include 'post/partials/_scripts.html' %}
+    <!-- End Scripts -->
+
+  </body>
+</html>
