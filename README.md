@@ -545,3 +545,6 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         Karena di dalam tabel Author ada kolom profile_picture (tempat image),
         maka Django akan minta kita untuk menginstal Pillow.
+
+
+## 13. DJANGO ADMIN DAN MIGRASI
