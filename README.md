@@ -793,3 +793,15 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         (0 rows)
 
         modified:   README.md
+
+
+#### 4. Membuat superuser dan login
+
+        (dreamblog) λ python manage.py createsuperuser
+        Username (leave blank to use 'ing'): superuser
+        Email address: superuser@mail.com
+        Password:superuser@mail.com
+        Password (again):superuser@mail.com
+        The password is too similar to the email address.
+        Bypass password validation and create user anyway? [y/N]: y
+        Superuser created successfully.
