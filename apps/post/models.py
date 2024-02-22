@@ -106,6 +106,7 @@ class Category(models.Model):
 # Tag model
 class Tag(models.Model):
 	title = models.CharField(max_length=30)
+	category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.title
