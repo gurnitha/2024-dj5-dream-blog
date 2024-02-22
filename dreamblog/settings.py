@@ -103,10 +103,10 @@ WSGI_APPLICATION = "dreamblog.wsgi.application"
 #     }
 # }
 
-# POSTGRESQL
+# # POSTGRESQL
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': '2024-dj5-dream-blog',
 #         'USER': 'postgres',
 #         'PASSWORD': 'pemogan148',
@@ -120,10 +120,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': env('DATABASE_NAME'),
-        'USERNAME': env('DATABASE_USER'),
+        'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASSWORD'),
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '5433'
     }
 }
 

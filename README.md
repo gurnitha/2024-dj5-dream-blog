@@ -548,3 +548,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 13. DJANGO ADMIN DAN MIGRASI
+
+
+#### 1. Fixing issues
+
+        modified:   README.md
+        modified:   dreamblog/settings.py
