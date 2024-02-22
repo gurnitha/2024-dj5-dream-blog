@@ -302,3 +302,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 11. DATABASE
+
+
+#### 1. Membuat Postgres Database
+
+        modified:   README.md
+        modified:   dreamblog/settings.py
