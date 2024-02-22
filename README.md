@@ -814,3 +814,15 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 
 ## 14. CRUD  
+
+
+#### 1. CREAT post dari admin dashboard
+
+        modified:   README.md
+        new file:   media_root/authors/avatar-1.jpg
+        new file:   media_root/authors/avatar-2.jpg
+        new file:   media_root/authors/avatar-3.jpg
+        new file:   media_root/authors/ing.jpeg
+        new file:   media_root/featured-pic-1.jpeg
+        new file:   media_root/featured-pic-2.jpeg
+        new file:   media_root/featured-pic-3.jpeg
