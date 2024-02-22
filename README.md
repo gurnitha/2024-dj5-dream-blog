@@ -487,3 +487,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         modified:   apps/post/models.py
+
+
+#### 5. Membuat model Post
+
+        modified:   README.md
+        modified:   apps/post/models.py

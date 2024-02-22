@@ -109,3 +109,19 @@ class Tag(models.Model):
 
 	def __str__(self):
 		return self.title
+
+
+# Post model
+class Post(models.Model):
+	title = models.CharField(max_length=100)
+	overview = models.TextField()
+	timestamp = models.DateTimeField(auto_now_add=True)
+	# Todo comment count, for now default = 0
+	comment_count = models.IntegerField(default=0)
+	view_count = models.IntegerField(default=0)
+	thumbnail = models.ImageField()
+	# To allow us to select as many categories belong to a post
+	featured = models.BooleanField()
+
+	def __str__(self):
+		return self.title
