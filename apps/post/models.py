@@ -1,7 +1,13 @@
 # apps/post/models.py
 
-# Django modules
+# Django and third parties modules
 from django.db import models
+from django.contrib.auth import get_user_model
+
+# Define User
+User = get_user_model()
+
+# Locals
 
 # Create your models here.
 
@@ -78,3 +84,12 @@ from django.db import models
         secara otomatis membuatkan entitas baru yang menghubungkan kedua model.
 
         """
+
+
+# Author model
+class Author(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	profile_picture = models.ImageField()
+
+	def __str__(self):
+		return self.user.username
