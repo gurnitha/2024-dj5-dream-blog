@@ -558,7 +558,7 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
 #### 2. Menjalankan perintah makemigrations
 
-        NOTE: Tentang peringah makemigrations
+        NOTE: Tentang perintah makemigrations
 
         Saat Anda membuat perubahan pada model Anda, seperti menambahkan bidang baru, mengubah jenis bidang, atau bahkan membuat model baru, menjalankannya akan makemigrationsmenganalisis perubahan tersebut dan menghasilkan file migrasi yang menangkap perubahan dalam format yang dapat dibaca manusia. File migrasi ini disimpan di migrationsdirektori aplikasi Anda.
 
@@ -694,3 +694,102 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         new file:   apps/post/migrations/0001_initial.py
+
+
+#### 3. Menjalankan perintah migrate
+
+        NOTE: Tentang perintah migrate
+
+        Perintah ini migratemenerapkan perubahan yang dicatat dalam file migrasi ke database. Ini mengeksekusi kueri SQL yang diperlukan untuk membuat skema database sejalan dengan definisi model Anda. Perintah ini membuat tabel, mengubah kolom, menambahkan indeks, dan melakukan operasi terkait database lainnya yang diperlukan untuk mencerminkan perubahan yang Anda buat.
+
+        Perintah ini migratemenangani urutan penerapan migrasi, memastikan bahwa ketergantungan antar migrasi terpenuhi.
+
+        Migrasi di Django pada dasarnya migrasi mengeksekusi perintah SQL dalam file database. Jadi setelah menjalankan migrasi, semua tabel aplikasi yang Anda instal dibuat di file database Anda.
+
+        Jadi selalu ingat setiap kali Anda membuat model baru atau mengubah model yang sudah ada, Anda harus selalu menerapkan makemigation terlebih dahulu dan kemudian perintah migrasi untuk melihat perubahan yang Anda buat pada model harus diterapkan ke database.
+
+        (dreamblog) λ python manage.py migrate
+        Operations to perform:
+          Apply all migrations: admin, auth, contenttypes, post, sessions
+        Running migrations:
+          Applying contenttypes.0001_initial... OK
+          Applying auth.0001_initial... OK
+          Applying admin.0001_initial... OK
+          Applying admin.0002_logentry_remove_auto_add... OK
+          Applying admin.0003_logentry_add_action_flag_choices... OK
+          Applying contenttypes.0002_remove_content_type_name... OK
+          Applying auth.0002_alter_permission_name_max_length... OK
+          Applying auth.0003_alter_user_email_max_length... OK
+          Applying auth.0004_alter_user_username_opts... OK
+          Applying auth.0005_alter_user_last_login_null... OK
+          Applying auth.0006_require_contenttypes_0002... OK
+          Applying auth.0007_alter_validators_add_error_messages... OK
+          Applying auth.0008_alter_user_username_max_length... OK
+          Applying auth.0009_alter_user_last_name_max_length... OK
+          Applying auth.0010_alter_group_name_max_length... OK
+          Applying auth.0011_update_proxy_permissions... OK
+          Applying auth.0012_alter_user_first_name_max_length... OK
+          Applying post.0001_initial... OK
+          Applying sessions.0001_initial... OK
+
+
+        (dreamblog) λ python manage.py dbshell
+        psql (15.3, server 16.1)
+        WARNING: psql major version 15, server major version 16.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        <!-- SHOW TABLES -->
+
+        2024-dj5-dream-blog=# \dt
+                           List of relations
+         Schema |            Name            | Type  |  Owner
+        --------+----------------------------+-------+----------
+         public | auth_group                 | table | postgres
+         public | auth_group_permissions     | table | postgres
+         public | auth_permission            | table | postgres
+         public | auth_user                  | table | postgres
+         public | auth_user_groups           | table | postgres
+         public | auth_user_user_permissions | table | postgres
+         public | django_admin_log           | table | postgres
+         public | django_content_type        | table | postgres
+         public | django_migrations          | table | postgres
+         public | django_session             | table | postgres
+         public | post_author                | table | postgres
+         public | post_category              | table | postgres
+         public | post_post                  | table | postgres
+         public | post_post_categories       | table | postgres
+         public | post_post_tags             | table | postgres
+         public | post_tag                   | table | postgres
+        (16 rows)
+
+        <!-- DESCRIBE TABLE post_author -->
+        2024-dj5-dream-blog=# \dt post_author;
+            List of relations
+         Schema |    Name     | Type  |  Owner
+        --------+-------------+-------+----------
+         public | post_author | table | postgres
+        (1 row)
+
+        <!-- SELECT * FROM post_author -->
+        2024-dj5-dream-blog=# SELECT * FROM post_author;
+         id | profile_picture | user_id
+        ----+-----------------+---------
+        (0 rows)
+
+        <!-- SELECT user FROM post_author -->
+        2024-dj5-dream-blog=# SELECT user FROM post_author;
+         user
+        ------
+        (0 rows)
+
+        <!-- SELECT user, profile_picture FROM post_author -->
+        2024-dj5-dream-blog=# SELECT user, profile_picture FROM post_author;
+         user | profile_picture
+        ------+-----------------
+        (0 rows)
+
+        modified:   README.md
