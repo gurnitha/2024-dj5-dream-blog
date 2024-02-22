@@ -12,20 +12,37 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+
+# new 1 of 6 import environ
+import environ
+env = environ.Env( # new
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# end new
+
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+## Build paths inside the project like this: BASE_DIR / 'subdir'.
+# BASE_DIR = Path(__file__).resolve().parent.parent # ori
 
+# new 2 of 6:  Set the project base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # new
+
+# new 3 of 6: Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env')) # new
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-m%-@9(wxfmuh+(h$%detthbcco=r(gx1nn0r6z78*er8r&=^wx"
+# new 4 of 6: SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env('SECRET_KEY') # new
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+##  SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True # ori
+
+# new 5 of 6: False if not in os.environ because of casting above
+DEBUG = env('DEBUG') # new
 
 ALLOWED_HOSTS = []
 
@@ -87,14 +104,26 @@ WSGI_APPLICATION = "dreamblog.wsgi.application"
 # }
 
 # POSTGRESQL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': '2024-dj5-dream-blog',
+#         'USER': 'postgres',
+#         'PASSWORD': 'pemogan148',
+#         'HOST': 'localhost',
+#         'PORT': '5433'
+#     }
+# }
+
+# new 6 of 6: Set the db connection
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '2024-dj5-dream-blog',
-        'USER': 'postgres',
-        'PASSWORD': 'pemogan148',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('DATABASE_NAME'),
+        'USERNAME': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
         'HOST': 'localhost',
-        'PORT': '5433'
+        'PORT': '5432'
     }
 }
 

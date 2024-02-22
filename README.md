@@ -322,3 +322,69 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         modified:   dreamblog/settings.py
 
+
+#### 3. Mengamankan database
+
+        (dreamblog) λ touch .env .env-example
+
+        C:\Users\ING\Desktop\2024-DEVSPACE\2024-dj5-dream-blog\root(main -> origin)
+        (dreamblog) λ pip install django-environ
+        Collecting django-environ
+          Using cached django_environ-0.11.2-py2.py3-none-any.whl.metadata (11 kB)
+        Using cached django_environ-0.11.2-py2.py3-none-any.whl (19 kB)
+        Installing collected packages: django-environ
+        Successfully installed django-environ-0.11.2
+
+        STEPS:
+
+        1. Install: pip install django-environ
+        2. Create .env file
+        3. Setup .env
+                DEBUG=on
+                SECRET_KEY=
+                DATABASE_NAME=
+                DATABASE_USER=
+                DATABASE_PASSWORD=
+        4. Setup settings.py in 6 steps:
+
+                # step: 1 of 6 import environ
+                import environ
+                env = environ.Env( # new
+                    # set casting, default value
+                    DEBUG=(bool, False)
+                )
+
+                # step: 2 of 6:  Set the project base directory
+                BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+                # step: 3 of 6: Take environment variables from .env file
+                environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+                # step: 4 of 6: SECURITY WARNING: keep the secret key used in production secret!
+                SECRET_KEY = env('SECRET_KEY')
+
+                # step: 5 of 6: False if not in os.environ because of casting above
+                DEBUG = env('DEBUG') # new
+
+                # step: 6 of 6: Set the db connection
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                        'NAME': env('DATABASE_NAME'),
+                        'USERNAME': env('DATABASE_USER'),
+                        'PASSWORD': env('DATABASE_PASSWORD'),
+                        'HOST': 'localhost',
+                        'PORT': '5432'
+                    }
+                }
+
+        5. Check: 
+        (dreamblog) λ python manage.py check
+        System check identified no issues (0 silenced).
+
+        6. source: https://django-environ.readthedocs.io/en/latest/quickstart.html
+
+        new file:   .env-example
+        modified:   .gitignore
+        modified:   README.md
+        modified:   dreamblog/settings.py

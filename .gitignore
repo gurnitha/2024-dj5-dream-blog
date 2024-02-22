@@ -1,5 +1,6 @@
 # NEW
 venv312502
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
