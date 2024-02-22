@@ -123,6 +123,7 @@ class Post(models.Model):
 	author = models.ForeignKey(Author, on_delete=models.CASCADE)
 	thumbnail = models.ImageField()
 	# To allow us to select as many categories belong to a post
+	categories = models.ManyToManyField(Category)
 	featured = models.BooleanField()
 
 	def __str__(self):
