@@ -882,3 +882,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   apps/post/templates/post/blog.html
         modified:   apps/post/views.py
 
+
+#### 7. READ: Retrieve and fetch tags and number of posts related to each tag
+
+        modified:   README.md
+        modified:   apps/post/templates/post/blog.html
+        modified:   apps/post/views.py
