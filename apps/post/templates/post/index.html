@@ -34,12 +34,12 @@
       <div class="container">
 
         
-        {% for post in post_lists %}
+        {% for featured_post in featured_posts %}
         <!-- Post-->
         <div class="row d-flex align-items-stretch">
 
           {% if not forloop.first and not forloop.last %}
-          <div class="image col-lg-5"><img src="{{ post.thumbnail.url}}" alt="..."></div>
+          <div class="image col-lg-5"><img src="{{ featured_post.thumbnail.url}}" alt="..."></div>
           {% endif %}
 
           <div class="text col-lg-7">
@@ -48,34 +48,34 @@
 
                 <header class="post-header">
                   <div class="category">
-                    {% for category in post.categories.all %}
+                    {% for category in featured_post.categories.all %}
                       <a href="#">{{ category.title }}</a>
                     {% endfor %}
                   </div><a href="post.html">
-                  <h2 class="h4">{{ post.title }}</h2></a>
+                  <h2 class="h4">{{ featured_post.title }}</h2></a>
                 </header>
 
-                <p>{{ post.overview|linebreaks|truncatechars:200 }}</p>
+                <p>{{ featured_post.overview|linebreaks|truncatechars:200 }}</p>
                 <footer class="post-footer d-flex align-items-center">
                   <a href="#" class="author d-flex align-items-center flex-wrap">
                     <div class="avatar">
-                      <img src="{{ post.author.profile_picture.url }}" alt="..." class="img-fluid">
+                      <img src="{{ featured_post.author.profile_picture.url }}" alt="..." class="img-fluid">
                     </div>
                     <div class="title">
-                      <span>{{ post.author.user.username }}</span>
+                      <span>{{ featured_post.author.user.username }}</span>
                     </div>
                   </a>
                   <div class="date">
                     <i class="icon-clock"></i> 
-                    {{ post.timestamp | timesince}} ago
+                    {{ featured_post.timestamp | timesince}} ago
                   </div>
-                  <div class="comments"><i class="icon-comment"></i>{{ post.comment_count }}</div>
+                  <div class="comments"><i class="icon-comment"></i>{{ featured_post.comment_count }}</div>
                 </footer>
               </div>
             </div>
           </div>
           {% if forloop.first or forloop.last %}
-          <div class="image col-lg-5"><img src="{{ post.thumbnail.url}}" alt="..."></div>
+          <div class="image col-lg-5"><img src="{{ featured_post.thumbnail.url}}" alt="..."></div>
           {% endif %}
         </div>
         <!-- End Post -->
@@ -103,39 +103,28 @@
           <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </header>
         <div class="row">
+
+          {% for latest_post in latest_posts %}
+          <!-- post -->
           <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="{% static 'assets/img/blog-1.jpg' %}" alt="..." class="img-fluid"></a></div>
+            <div class="post-thumbnail"><a href="post.html">
+              <img src="{{ latest_post.thumbnail.url }}" alt="..." class="img-fluid"></a>
+            </div>
             <div class="post-details">
               <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#">Business</a></div>
+                <div class="date">{{ latest_post.timestamp }}</div>
+                <div class="category">
+                  {% for category in latest_post.categories.all %}
+                  <a href="#">{{ category.title }}</a>
+                  {% endfor %}
+                </div>
               </div><a href="post.html">
-                <h3 class="h4">Ways to remember your important ideas</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <h3 class="h4">{{ latest_post.title }}</h3></a>
+              <p class="text-muted">{{ latest_post.overview|linebreaks|truncatechars:200}}</p>
             </div>
           </div>
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="{% static 'assets/img/blog-2.jpg' %}" alt="..." class="img-fluid"></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#">Technology</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Diversity in Engineering: Effect on Questions</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="{% static 'assets/img/blog-3.jpg' %}" alt="..." class="img-fluid"></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#">Financial</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Alberto Savoia Can Teach You About Interior</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
+          <!-- end post -->
+          {% endfor %}
         </div>
       </div>
     </section>

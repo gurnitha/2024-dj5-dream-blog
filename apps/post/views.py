@@ -9,15 +9,23 @@ from apps.post.models import Post
 # Create your views here.
 
 def home_view(request):
-	post_lists = Post.objects.filter(featured=True)
+	featured_posts = Post.objects.filter(featured=True).order_by('-timestamp')[0:3]
 	# print(post_lists)
+	latest_posts = Post.objects.order_by('-timestamp')[0:3]
+	print(latest_posts)
 	data = {
-		'post_lists':post_lists,
+		'featured_posts':featured_posts,
+		'latest_posts':latest_posts,
 	}
 	return render(request, 'post/index.html', data)
 
 def blog_view(request):
-	return render(request, 'post/blog.html')
+	post_list = Post.objects.all()
+	print(post_list)
+	data = {
+		'post_list':post_list,
+	}
+	return render(request, 'post/blog.html', data)
 
 def post_view(request):
 	return render(request, 'post/post.html')

@@ -858,3 +858,14 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
 
         modified:   README.md
         modified:   apps/post/templates/post/index.html
+
+
+#### 4. READ: Retrieve and fetch semua posts pada laman blog
+
+        modified:   README.md
+        modified:   apps/post/templates/post/blog.html
+        modified:   apps/post/templates/post/index.html
+        modified:   apps/post/views.py
+        new file:   media_root/featured-pic-1_furvADn.jpeg
+
+
