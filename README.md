@@ -869,3 +869,8 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         new file:   media_root/featured-pic-1_furvADn.jpeg
 
 
+#### 5. READ: Retrieve and fetch 3 latest post pada laman blog
+
+        modified:   README.md
+        modified:   apps/post/templates/post/blog.html
+        modified:   apps/post/views.py

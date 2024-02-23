@@ -6,11 +6,14 @@
 
     <div class="container">
       <div class="row">
-        <!-- Latest Posts -->
+
+        <!--/////////////////////////////////// Main content ///////////////////////////////////////-->
         <main class="posts-listing col-lg-8"> 
+
+          <!-- Container -->
           <div class="container">
 
-            <!--============================== All Post ==============================-->
+            <!--============================== All Post =================================-->
             <div class="row">
               {% for post in post_list %}
               <div class="post col-xl-6">
@@ -62,9 +65,9 @@
               <!-- End Post -->
               {% endfor %}
             </div>
-            <!--============================== End All posts ==============================-->
+            <!--============================== End All posts ============================-->
 
-            <!-- Pagination -->
+            <!--=============================== Pagination ===============================-->
             <nav aria-label="Page navigation example">
               <ul class="pagination pagination-template d-flex justify-content-center">
                 <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
@@ -74,10 +77,16 @@
                 <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
               </ul>
             </nav>
+            <!--=============================== End Pagination ===========================-->
+
           </div>
+          <!-- End Container -->
         </main>
+        <!--/////////////////////////////////// End Main content ///////////////////////////////////-->
+
+        <!--/////////////////////////////////////// Aside ///////////////////////////////////////////-->
         <aside class="col-lg-4">
-          <!-- Widget [Search Bar Widget]-->
+          <!--======================================= Search =======================================-->
           <div class="widget search">
             <header>
               <h3 class="h6">Search the blog</h3>
@@ -89,41 +98,32 @@
               </div>
             </form>
           </div>
-          <!-- Widget [Latest Posts Widget]        -->
+          <!--======================================= End Search ===================================-->
+          
+          <!--======================================= Latest posts =================================-->
           <div class="widget latest-posts">
             <header>
               <h3 class="h6">Latest Posts</h3>
             </header>
             <div class="blog-posts"><a href="#">
+                {% for latest_post in latest_posts %}
                 <div class="item d-flex align-items-center">
-                  <div class="image"><img src="{% static 'assets/img/small-thumbnail-1.jpg' %}" alt="..." class="img-fluid"></div>
-                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>
-                    <div class="d-flex align-items-center">
-                      <div class="views"><i class="icon-eye"></i> 500</div>
-                      <div class="comments"><i class="icon-comment"></i>12</div>
+                  <div class="image"><img src="{{ latest_post.thumbnail.url }}" alt="..." class="img-fluid"></div>
+                  <a href="#">
+                    <div class="title"><strong>{{ latest_post.title }}</strong>
+                      <div class="d-flex align-items-center">
+                        <div class="views"><i class="icon-eye"></i>{{ latest_post.view_count }}</div>
+                        <div class="comments"><i class="icon-comment"></i>{{ latest_post.comment_count }}</div>
+                      </div>
                     </div>
-                  </div>
-                </div></a><a href="#">
-                <div class="item d-flex align-items-center">
-                  <div class="image"><img src="{% static 'assets/img/small-thumbnail-2.jpg' %}" alt="..." class="img-fluid"></div>
-                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>
-                    <div class="d-flex align-items-center">
-                      <div class="views"><i class="icon-eye"></i> 500</div>
-                      <div class="comments"><i class="icon-comment"></i>12</div>
-                    </div>
-                  </div>
-                </div></a><a href="#">
-                <div class="item d-flex align-items-center">
-                  <div class="image"><img src="{% static 'assets/img/small-thumbnail-3.jpg' %}" alt="..." class="img-fluid"></div>
-                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>
-                    <div class="d-flex align-items-center">
-                      <div class="views"><i class="icon-eye"></i> 500</div>
-                      <div class="comments"><i class="icon-comment"></i>12</div>
-                    </div>
-                  </div>
-                </div></a></div>
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
           </div>
-          <!-- Widget [Categories Widget]-->
+          <!--======================================= End Latest posts =============================-->
+
+          <!--======================================= Categories ===================================-->
           <div class="widget categories">
             <header>
               <h3 class="h6">Categories</h3>
@@ -134,7 +134,9 @@
             <div class="item d-flex justify-content-between"><a href="#">Tips</a><span>17</span></div>
             <div class="item d-flex justify-content-between"><a href="#">Local</a><span>25</span></div>
           </div>
-          <!-- Widget [Tags Cloud Widget]-->
+          <!--======================================= End Categories ===============================-->
+
+          <!--======================================= Tags =========================================-->
           <div class="widget tags">       
             <header>
               <h3 class="h6">Tags</h3>
@@ -147,7 +149,10 @@
               <li class="list-inline-item"><a href="#" class="tag">#Economy</a></li>
             </ul>
           </div>
+          <!--======================================= End Tags =====================================-->
         </aside>
+        <!--/////////////////////////////////////// End Aside ///////////////////////////////////////-->
+
       </div>
     </div>
 
