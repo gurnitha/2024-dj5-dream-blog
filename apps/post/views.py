@@ -3,6 +3,7 @@
 # Django and third parties modules
 from django.shortcuts import render
 from django.db.models import Count
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Locals
 from apps.post.models import Post
@@ -67,17 +68,44 @@ def blog_view(request):
 		{'tags__title': '_Time', 'tags__title__count': 2}]>
 		[23/Feb/2024 11:21:46] "GET /blog/ HTTP/1.1" 200 24587
 	'''
-	
+
+	# Set number of post to view per page
+	paginator = Paginator(post_list, 2)
+	# Page request pariable
+	# -> 127.0.0.1:8000/blog/?page=3	
+	page_request_var = 'page' # <-- page=3
+	page = request.GET.get(page_request_var)  # <-- page=3
+	# Do some check
+	try:
+		paginated_queryset = paginator.page(page)
+	# if request was not integer: 
+	# --> 127.0.0.1:8000/blog/?page=fdfkdfkdfk
+	# the return to page 1 or home page		
+	except PageNotAnInteger: 
+		paginated_queryset = paginator.page(1)
+	# if request was empty page: 
+	# --> 127.0.0.1:8000/blog/?page=
+	# the return number of pages in queryset
+	except EmptyPage:
+		paginated_queryset = paginator.page(paginator.num_pages)
+
 	data = {
-		'post_list':post_list,
+		# 'post_list':post_list, # see line 99 ---> 'post_list':paginated_queryset,
 		'latest_posts':latest_posts,
 		'category_count':category_count,
 		'tag_count':tag_count,
+
+		# Pagination
+		'post_list':paginated_queryset,
+		'page_request_var':page_request_var,
 	}
+
 	return render(request, 'post/blog.html', data)
+
 
 def post_view(request):
 	return render(request, 'post/post.html')
+
 
 def contact_view(request):
 	return render(request, 'post/contact.html')
