@@ -895,3 +895,9 @@ Membangung Aplikasi Blog from Zero to Deployment menggunakan Django versi 5
         modified:   README.md
         modified:   apps/post/views.py
         new file:   media_root/featured-pic-3_vLUFDZI.jpeg
+
+
+#### 9. READ: Paginasi part 2 - Implementasi paginasi pada blog page
+
+        modified:   README.md
+        modified:   apps/post/templates/post/blog.html
